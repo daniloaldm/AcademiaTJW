@@ -4,9 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sistema de Cadastro de Clientes V.0</title>
+<title>Controle de Clientes</title>
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<a href="ClienteController?app=listarCliente">SisClientes</a>
+<br/>
+	<a 
+		class="btn" 
+		href="ClienteController?app=listarCliente">
+			ACADEMIA TJW
+	</a>
 </body>
 </html>
