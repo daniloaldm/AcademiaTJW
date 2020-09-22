@@ -38,7 +38,9 @@ public class  ClienteController extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		String app = request.getParameter("app");
+			
 
 		// Página de Cadastro
 		if (app.equalsIgnoreCase("cadastro")) {
@@ -90,7 +92,7 @@ public class  ClienteController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		request.setCharacterEncoding("UTF-8");
 		Cliente cliente = new Cliente();
 		BeanUtilities.populateBean(cliente, request);		
 		

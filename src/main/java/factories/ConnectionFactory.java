@@ -13,7 +13,7 @@ public class ConnectionFactory {
 				conn = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/gym?useTimezone=true&serverTimezone=UTC",
 					"root",
-					"mysqlplacegoodsk8"
+					"12345"
 				);
 			} catch (Exception e) {
 				e.printStackTrace();
