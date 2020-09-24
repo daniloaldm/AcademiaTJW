@@ -6,6 +6,7 @@ public class Cliente {
 	private String endereco;
 	private String fone;
 	private String modalidade;
+	private String horario;
 	
 	
 	public int getId() {
@@ -46,6 +47,14 @@ public class Cliente {
 
 	public void setModalidade(String modalidade) {
 		this.modalidade = modalidade;
+	}
+
+	public String getHorario() {
+		return horario;
+	}
+
+	public void setHorario(String horario) {
+		this.horario = horario;
 	}
 	
 

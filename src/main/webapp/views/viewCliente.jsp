@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Listar Clientes</title>
 <link rel="stylesheet" href="./css/style.css">
 
@@ -21,6 +21,7 @@
                 <th>Endereço</th>
                 <th>Telefone</th>
                 <th>Modalidade</th>
+                <th>Horário</th>
                 <th colspan=2>Ações</th>
             </tr>
         </thead>
@@ -31,6 +32,7 @@
                     <td><c:out value="${cliente.endereco}" /></td>
                     <td><c:out value="${cliente.fone}" /></td>
                     <td><c:out value="${cliente.modalidade}" /></td>
+                     <td><c:out value="${cliente.horario}" /></td>
                     <td><a class="btn btn-danger" href="ClienteController?app=excluir&clienteId=<c:out value="${cliente.id}"/>">Excluir</a></td>
                     <td><a class="btn btn-warning" href="ClienteController?app=update&clienteId=<c:out value="${cliente.id}"/>">Atualizar</a></td>
                 </tr>

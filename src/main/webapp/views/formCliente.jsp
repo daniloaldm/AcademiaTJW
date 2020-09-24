@@ -28,8 +28,12 @@
 	<label>Modalidade:</label> <br/>
 	<input required type="text" name="modalidade" value="${cliente.modalidade}"><br>
 	
+	<label>Horário:</label> <br/>
+	<input required type="text" name="horario" value="${cliente.horario}"><br>
+	
 	<input class="btn btn-primary" type=submit  name="btCadastro" value="${not empty cliente ? "Atualizar" : "Cadastrar"}">
 	<a class="btn" href="ClienteController?app=listarModalidade">Modalidades</a>
+	<a class="btn" href="ClienteController?app=listarHorarios">Horários</a>
 	<a class="btn" href="ClienteController?app=listarCliente">Voltar</a>
 	
 </form>

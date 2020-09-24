@@ -3,6 +3,8 @@ package factories;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+
+// CLASSE QUE CONECTA O PROJETO AO BANCO DE DADOS UTILIZADO PARA APLICACAO
 public class ConnectionFactory {
 	private static Connection conn;
 	
@@ -13,7 +15,7 @@ public class ConnectionFactory {
 				conn = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/gym?useTimezone=true&serverTimezone=UTC",
 					"root",
-					"12345"
+					"mysqlplacegoodsk8"
 				);
 			} catch (Exception e) {
 				e.printStackTrace();

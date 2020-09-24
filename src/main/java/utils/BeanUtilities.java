@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.beanutils.BeanUtils;
 import java.lang.reflect.InvocationTargetException;
 
-
+// CLASSE BEANS PARA MAPEAR E POPULAR OS METODOS DOPOST DO CLIENTE CONTROLLER
 public class BeanUtilities {
 	public static void populateBean(Object formBean, HttpServletRequest request) {
 		populateBean(formBean,request.getParameterMap());
