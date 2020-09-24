@@ -26,23 +26,24 @@ use gym;
    `nome` text NOT NULL,
    `endereco` text NOT NULL,
    `telefone` text NOT NULL,
-   `modalidade` text NOT NULL
+   `modalidade` text NOT NULL,
+   `hora` text NOT NULL
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Fazendo dump de dados para tabela `clientes`
 --
 
-INSERT INTO `clientes` (`id`, `nome`, `endereco`, `telefone`,`modalidade`) VALUES
-(1, 'MURILO', 'Rua 7', '(85) 999999999', 'Kickboxing');
+INSERT INTO `clientes` (`id`, `nome`, `endereco`, `telefone`,`modalidade`, `hora`) VALUES
+(1, 'MURILO', 'Rua 7', '(85) 999999999', 'Kickboxing', 'Tarde');
 
-INSERT INTO `clientes` (`id`, `nome`, `endereco`, `telefone`, `modalidade`) VALUES
-(2, 'ARTHUR', 'Rua 11', '(85) 999998888', 'Musculação');
+INSERT INTO `clientes` (`id`, `nome`, `endereco`, `telefone`, `modalidade`, `hora`) VALUES
+(2, 'ARTHUR', 'Rua 11', '(85) 999998888', 'Musculação', 'Noite');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_user`
+-- Estrutura para tabela `modalidade`
 --
 
   CREATE TABLE `modalidade` (
@@ -70,6 +71,19 @@ INSERT INTO `modalidade` (`id`, `type`) VALUES
 (5, 'Lutas');
 
 
+ CREATE TABLE `horarios` (
+   `id` int(11) NOT NULL,
+   `turno` text NOT NULL
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `horarios` (`id`, `turno`) 	VALUES
+(1, 'Manhã');
+
+INSERT INTO `horarios` (`id`, `turno`) 	VALUES
+(2, 'Tarde');
+
+INSERT INTO `horarios` (`id`, `turno`) 	VALUES
+(3, 'Noite');
 
 --
 -- Índices de tabelas apagadas
@@ -86,6 +100,13 @@ ALTER TABLE `clientes`
 --
 ALTER TABLE `modalidade`
   ADD PRIMARY KEY (`id`);
+  
+  --
+-- Índices de tabela `horarios`
+--
+  
+  ALTER TABLE `horarios`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de tabelas apagadas
@@ -101,6 +122,9 @@ ALTER TABLE `clientes`
 --
 ALTER TABLE `modalidade`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  
+ALTER TABLE `horarios`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
