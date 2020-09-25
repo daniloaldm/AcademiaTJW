@@ -14,8 +14,8 @@ public class ConnectionFactory {
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				conn = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/gym?useTimezone=true&serverTimezone=UTC",
-					"root",
-					"mysqlplacegoodsk8"
+					"LOGIN DO LOCALHOST DO MYSQL",
+					"COLOCAR SENHA DO MYSQL"
 				);
 			} catch (Exception e) {
 				e.printStackTrace();
